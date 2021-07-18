@@ -1,0 +1,56 @@
+@import "../../partials/partial";
+
+.sidevideo {
+  //   padding-left: 16px;
+  //   padding-right: 16px;
+  display: flex;
+  width: 100%;
+
+  &__image {
+    border-top: 1px solid $mercury;
+    margin-top: 0.5rem;
+    flex-shrink: 0;
+    width: 120px;
+    height: 70px;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+  }
+
+  &__title {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    font-family: $font-family;
+    font-weight: bold;
+    padding-left: 1rem;
+    @include media($tablet) {
+      font-size: 14px;
+    }
+  }
+
+  &__channel {
+    font-size: 12px;
+    padding-left: 1rem;
+    font-family: $font-family;
+    font-weight: 400;
+    @include media($tablet) {
+      font-size: 14px;
+    }
+  }
+
+  &__next {
+    font-size: 12px;
+    font-family: $font-family;
+    font-weight: 400;
+    color: $silver;
+    border-top: 2px solid $mercury;
+    @include media($tablet) {
+      font-size: 18px;
+      border-top: 2px solid $mercury;
+      padding-top: 1rem;
+    }
+  }
+}

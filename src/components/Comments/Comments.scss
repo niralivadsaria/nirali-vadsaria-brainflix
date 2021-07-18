@@ -1,0 +1,45 @@
+@import "../../partials/partial";
+
+.details {
+  border-top: 1px solid $mercury;
+
+  margin-top: 0.5rem;
+}
+
+.description {
+  //   padding-left: 16px;
+  //   padding-right: 16px;
+  display: flex;
+  padding-top: 0.5rem;
+
+  &__image {
+    width: 36px;
+    background-color: #afafaf;
+    background-size: cover;
+    border-radius: 50%;
+    height: 36px;
+    padding-bottom: 0.2rem;
+  }
+  &__name {
+    font-size: 12px;
+    padding-right: 2rem;
+    padding-left: 1rem;
+    font-family: $font-family;
+    font-weight: 700;
+    @include media($tablet) {
+      font-size: 14px;
+    }
+  }
+
+  &__comment {
+    font-size: 14px;
+    font-family: $font-family;
+    font-weight: 400;
+    @include media($tablet) {
+      font-size: 16px;
+    }
+  }
+  &__date {
+    padding-left: 0.5rem;
+  }
+}
