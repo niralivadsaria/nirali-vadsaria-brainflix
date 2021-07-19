@@ -11,10 +11,16 @@ class App extends Component {
     mainVideo: 0,
     videoDetails: Video_detail,
     videos: Videos,
+    currentVideo: Video_detail[0],
   };
 
   handleClick = (id) => {
-    console.log(id);
+    // console.log(event);
+    // console.log(id);
+    let sideVideo = this.state.videoDetails.find((video) => video.id === id);
+    this.setState({
+      currentVideo: sideVideo,
+    });
   };
 
   render() {

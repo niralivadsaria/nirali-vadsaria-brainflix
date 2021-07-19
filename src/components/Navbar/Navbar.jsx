@@ -5,20 +5,20 @@ import React, { Component } from "react";
 
 function Logo() {
   return (
-    <div class="header">
-      <img class="header__image" src={logoImage} alt="" />
-      <div class="search">
+    <div className="header">
+      <img className="header__image" src={logoImage} alt="" />
+      <div className="search">
         <input
-          class="search__input"
+          className="search__input"
           type="text"
           id="Search"
           placeholder="Search"
         />
       </div>
 
-      <div class="logos">
-        <button class="navbar__upload"> UPLOAD </button>
-        <img class="avatar__image" src={avatarImage} alt="" />
+      <div className="logos">
+        <button className="navbar__upload"> UPLOAD </button>
+        <img className="avatar__image" src={avatarImage} alt="" />
       </div>
     </div>
   );

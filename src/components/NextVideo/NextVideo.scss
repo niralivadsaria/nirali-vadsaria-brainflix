@@ -5,6 +5,9 @@
   //   padding-right: 16px;
   display: flex;
   width: 100%;
+  @include media($desktop) {
+    padding-left: 0.5rem;
+  }
 
   &__image {
     border-top: 1px solid $mercury;
@@ -29,6 +32,9 @@
     @include media($tablet) {
       font-size: 14px;
     }
+    @include media($desktop) {
+      font-size: 12px;
+    }
   }
 
   &__channel {
@@ -38,6 +44,9 @@
     font-weight: 400;
     @include media($tablet) {
       font-size: 14px;
+    }
+    @include media($desktop) {
+      font-size: 12px;
     }
   }
 
@@ -52,5 +61,16 @@
       border-top: 2px solid $mercury;
       padding-top: 1rem;
     }
+    @include media($desktop) {
+      border-top: none;
+    }
+  }
+}
+
+.Nextvideo {
+  @include media($desktop) {
+    border-left: 2px solid $mercury;
+    border-top: none;
+    padding-left: 0.5rem;
   }
 }

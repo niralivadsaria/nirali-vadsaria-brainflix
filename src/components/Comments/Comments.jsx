@@ -7,14 +7,16 @@ function Comments(props) {
     <>
       {comments.map(function (c) {
         return (
-          <div class="details">
-            <div class="description">
-              <img class="description__image" alt="" />
-              <p class="description__name"> {c.name}</p>
-              <p class="description__date">{moment(c.timestamp).fromNow()} </p>
+          <div className="details">
+            <div className="description">
+              <img className="description__image" alt="" />
+              <p className="description__name"> {c.name}</p>
+              <p className="description__date">
+                {moment(c.timestamp).fromNow()}
+              </p>
             </div>
             <div>
-              <p class="description__comment"> {c.comment}</p>
+              <p className="description__comment"> {c.comment}</p>
             </div>
           </div>
         );

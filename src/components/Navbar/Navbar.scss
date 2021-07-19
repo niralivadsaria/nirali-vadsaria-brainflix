@@ -14,8 +14,9 @@ body {
   @include media($tablet) {
     display: flex;
     flex-direction: row;
-    // padding-left: 32px;
-    // padding-right: 32px;
+  }
+
+  @include media($desktop) {
   }
 
   &__image {
@@ -29,6 +30,9 @@ body {
       width: 15%;
       padding-right: 4rem;
       margin-bottom: 1rem;
+    }
+    @include media($desktop) {
+      width: 10%;
     }
   }
 }
@@ -57,6 +61,11 @@ body {
       padding-left: 3rem;
       width: 100%;
     }
+    @include media($desktop) {
+      height: 50px;
+      width: 20rem;
+      margin-left: 15rem;
+    }
   }
 }
 
@@ -83,7 +92,14 @@ body {
     width: 100%;
     border: 1px solid #e1e1e1;
   }
+  @include media($desktop) {
+    height: 50px;
+
+    width: 10rem;
+    background-position: 20%;
+  }
 }
+
 .avatar__image {
   width: 48px;
   height: 48px;
@@ -91,10 +107,15 @@ body {
   padding-top: 1rem;
 
   @include media($tablet) {
-    width: 55px;
-    height: 55px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     padding-left: 1rem;
+  }
+  @include media($desktop) {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
   }
 }
 .logos {

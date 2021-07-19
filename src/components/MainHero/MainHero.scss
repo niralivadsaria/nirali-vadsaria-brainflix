@@ -11,6 +11,10 @@
 
   &__image {
     width: 100%;
+    @include media($desktop) {
+      // padding-left: 80px;
+      // padding-right: 80px;
+    }
   }
   &__title {
     font-size: 24px;
@@ -20,10 +24,29 @@
     @include media($tablet) {
       font-size: 36px;
     }
+    @include media($desktop) {
+      font-size: 36px;
+    }
   }
   &__timestamp {
     @include media($tablet) {
       padding-left: 1rem;
+    }
+    @include media($desktop) {
+      font-size: 14px;
+    }
+  }
+  &__container {
+    @include media($desktop) {
+      display: flex;
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+  &__channel {
+    @include media($desktop) {
+      font-size: 14px;
+      padding-left: 2rem;
     }
   }
 }
@@ -33,7 +56,10 @@
   justify-content: left;
   border-bottom: 2px solid $mercury;
   @include media($tablet) {
-    border-bottom: 2px solid $mercury;
+    border-bottom: none;
+  }
+  @include media($desktop) {
+    border-bottom: none;
   }
 
   &__views {
@@ -71,6 +97,11 @@
   @include media($tablet) {
     font-size: 18px;
   }
+  @include media($desktop) {
+    font-size: 12px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
 .comment {
@@ -82,6 +113,9 @@
     font-size: 1rem;
     @include media($tablet) {
       font-size: 1.5rem;
+    }
+    @include media($desktop) {
+      font-size: 1rem;
     }
   }
 
@@ -131,6 +165,8 @@
       margin-top: 0.5rem;
       border: 2px solid;
     }
+  }
+  @include media($desktop) {
   }
 }
 .comment-section {

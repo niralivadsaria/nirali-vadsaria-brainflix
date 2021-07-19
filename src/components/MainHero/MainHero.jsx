@@ -8,19 +8,23 @@ import moment from "moment";
 
 function MainHero(props) {
   const video = props.videoDetails[props.mainVideo];
-  console.log(video);
+
   return (
     <>
       <div className="main">
+        {/* {prop.currentVideo.map(function(details){
+
+
+        })}; */}
+
         <video className="main__image" controls poster={video.image}></video>
         <div className="main__container">
           <div className="main__topcontainer">
             <div className="main__title">{video.title} </div>
             <div className="list">
               <div className="time">
-                <p> By {video.channel}</p>
+                <p className="main__channel">By {video.channel}</p>
                 <p className="main__timestamp">
-                  {" "}
                   {moment(video.timestamp).fromNow()}
                 </p>
               </div>
