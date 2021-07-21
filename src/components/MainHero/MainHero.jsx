@@ -7,7 +7,7 @@ import imageAvatar from "../../Assets/Images/Mohan-muruge.jpg";
 import moment from "moment";
 
 function MainHero(props) {
-  const video = props.videoDetails[props.mainVideo];
+  const video = props.videoDetails;
 
   return (
     <>

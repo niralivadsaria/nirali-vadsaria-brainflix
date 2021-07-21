@@ -2,7 +2,7 @@ import "./NextVideo.scss";
 
 function NextVideo(props, eventHandler) {
   const videos = props.videoList;
-  videos.splice(0, 1);
+  // videos.splice(0, 1);
 
   return (
     <div className="Nextvideo">
@@ -13,7 +13,7 @@ function NextVideo(props, eventHandler) {
             <img
               className="sidevideo__image"
               onClick={(event) => {
-                props.eventHandler(event.id);
+                props.eventHandler(list.id);
               }}
               src={list.image}
               alt=""

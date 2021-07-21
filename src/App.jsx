@@ -16,7 +16,7 @@ class App extends Component {
 
   handleClick = (id) => {
     // console.log(event);
-    // console.log(id);
+    console.log(id);
     let sideVideo = this.state.videoDetails.find((video) => video.id === id);
     this.setState({
       currentVideo: sideVideo,
@@ -31,7 +31,7 @@ class App extends Component {
         </header>
         <main>
           <MainHero
-            videoDetails={this.state.videoDetails}
+            videoDetails={this.state.currentVideo}
             mainVideo={this.state.mainVideo}
             videos={this.state.videos}
             eventHandler={this.handleClick}
