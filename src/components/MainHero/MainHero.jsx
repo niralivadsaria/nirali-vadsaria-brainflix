@@ -4,6 +4,7 @@ import Comments from "../Comments/Comments";
 import Likes from "../../Assets/Icons/Icon-likes.svg";
 import Views from "../../Assets/Icons/Icon-views.svg";
 import imageAvatar from "../../Assets/Images/Mohan-muruge.jpg";
+import { Route } from "react-router-dom";
 import moment from "moment";
 
 function MainHero(props) {
@@ -12,11 +13,6 @@ function MainHero(props) {
   return (
     <>
       <div className="main">
-        {/* {prop.currentVideo.map(function(details){
-
-
-        })}; */}
-
         <video className="main__image" controls poster={video.image}></video>
         <div className="main__container">
           <div className="main__topcontainer">
@@ -44,7 +40,11 @@ function MainHero(props) {
               <h3 className="comment__no">3 Comments </h3>
             </div>
             <div className="comment">
-              <img className="image__avatar" src={imageAvatar} alt="" />
+              <img
+                className="image__avatar"
+                src={imageAvatar}
+                alt="image-avatar"
+              />
               <div className="comment__details">
                 <h2 className="comment__conversation">
                   {" "}
@@ -66,9 +66,12 @@ function MainHero(props) {
             <Comments comments={video.comments} />
           </div>
           <div className="main__bottomcontainer">
-            <NextVideo
-              videoList={props.videos}
-              eventHandler={props.eventHandler}
+            <Route
+              key={props.match.params.id}
+              path="/video/:id"
+              render={(routerProps) => (
+                <NextVideo videoList={props.videos} {...routerProps} />
+              )}
             />
           </div>
         </div>

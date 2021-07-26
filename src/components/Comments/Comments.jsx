@@ -5,9 +5,9 @@ function Comments(props) {
   const comments = props.comments ?? [];
   return (
     <>
-      {comments.map(function (c) {
+      {comments.map(function (c, idx) {
         return (
-          <div className="details">
+          <div className="details" key={idx}>
             <div className="description">
               <img className="description__image" alt="" />
               <p className="description__name"> {c.name}</p>
