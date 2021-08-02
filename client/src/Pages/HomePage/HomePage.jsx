@@ -60,16 +60,10 @@ class App extends React.Component {
       <>
         {this.state.currentVideo && this.state.videos && (
           <main>
-            {/* <Route
-              key={this.props.match.params.id}
-              path="/video/:id"
-              render={(routerProps) => ( */}
             <MainHero
               videoDetails={this.state.currentVideo}
               videos={this.state.videos}
             />
-            {/* )}
-            /> */}
           </main>
         )}
       </>

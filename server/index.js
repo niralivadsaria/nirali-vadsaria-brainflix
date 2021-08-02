@@ -13,7 +13,7 @@ app.use(cors());
 
 app.use("/videos", videos);
 
-app.use(express.static("public/images"));
+app.use("/images", express.static("public/images"));
 
 // require('dotenv') config();
 

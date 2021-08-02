@@ -66,13 +66,7 @@ function MainHero(props) {
             <Comments comments={video.comments} />
           </div>
           <div className="main__bottomcontainer">
-            {/* <Route
-              key={props.match.params.id}
-              path="/video/:id"
-              render={(routerProps) => ( */}
             <NextVideo videoList={props.videos} />
-            {/* )}
-            /> */}
           </div>
         </div>
       </div>

@@ -17,6 +17,7 @@ body {
   }
 
   @include media($desktop) {
+    // background-color: black;
   }
 
   &__image {
@@ -32,7 +33,8 @@ body {
       margin-bottom: 1rem;
     }
     @include media($desktop) {
-      width: auto;
+      width: 100%;
+      // background-color: black;
     }
   }
   &__link {
@@ -45,6 +47,10 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+
+    @include media($desktop) {
+      // background-color: black;
+    }
   }
 }
 
